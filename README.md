@@ -1,29 +1,46 @@
 # 🌍 Travel & Tourism Mobile App
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Node.js](https://img.shields.io/badge/Node.js-18+-green.svg)](https://nodejs.org/)
+[![Flutter](https://img.shields.io/badge/Flutter-3.16+-blue.svg)](https://flutter.dev/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-green.svg)](https://www.mongodb.com/cloud/atlas)
+
 A modern, feature-rich travel and tourism mobile application for Indian and international travelers with AI-powered trip planning, booking integration, and multiple monetization streams.
 
-## 🚀 Features
+**🌐 Live Demo**: [https://rahul700raj.github.io/travel-tourism-app/](https://rahul700raj.github.io/travel-tourism-app/)
 
-### Core Features
-- 🔐 **Multi-Auth System**: Email, Google, Mobile OTP
-- 🗺️ **Destination Explorer**: India + International destinations
-- 🤖 **AI Trip Planner**: Budget-based, personalized itineraries
+---
+
+## 📱 Screenshots & Demo
+
+> Add screenshots here after building the app
+
+---
+
+## ✨ Key Features
+
+### 🎯 Core Features
+- 🔐 **Multi-Auth System**: Email, Google OAuth, Mobile OTP
+- 🗺️ **Destination Explorer**: 300+ destinations (India + International)
+- 🤖 **AI Trip Planner**: Personalized itineraries using OpenAI GPT-4
 - 🏨 **Booking Integration**: Hotels, Flights, Buses, Trains
 - 👨‍🏫 **Local Guides**: Book verified local guides
 - 📹 **Travel Reels**: Instagram-style short videos
-- 🗺️ **Map Integration**: Nearby places, restaurants, attractions
+- 🗺️ **Smart Maps**: Google Maps integration for nearby places
 - 🌤️ **Weather & Safety**: Real-time weather, best time to visit
 - ❤️ **Wishlist**: Save favorite destinations
 - 🌐 **Multi-language**: Hindi + English support
 
-### Monetization Features
-- 💰 **Affiliate Commission**: Flights, Hotels, Cabs (2-8% commission)
+### 💰 Monetization Features
+- 💸 **Affiliate Commission**: 2-8% on bookings (Flights, Hotels, Cabs)
 - 📱 **Ad Integration**: Google AdMob (Banner, Interstitial, Native)
 - 👑 **Premium Subscription**: ₹199/month or ₹999/year
 - 🏢 **Business Listings**: Featured placement for local businesses
-- 📦 **Travel Packages**: Commission-based package bookings
+- 📦 **Travel Packages**: 10-15% commission on package bookings
 
-**Estimated Monthly Revenue**: ₹1,90,000 - ₹6,50,000
+**💵 Estimated Monthly Revenue**: ₹1,90,000 - ₹6,50,000
+
+---
 
 ## 🛠️ Tech Stack
 
@@ -33,57 +50,84 @@ A modern, feature-rich travel and tourism mobile application for Indian and inte
 - **UI Components**: Material Design / Custom
 - **Maps**: Google Maps API
 - **Video**: Video Player plugins
+- **Ads**: Google AdMob
 
 ### Backend
-- **Runtime**: Node.js + Express
-- **Database**: MongoDB / Firebase Firestore
-- **Authentication**: Firebase Auth
+- **Runtime**: Node.js 18+ with Express
+- **Database**: MongoDB Atlas
+- **Authentication**: Firebase Auth + JWT
 - **AI Integration**: OpenAI GPT-4 / Google Gemini
 - **Payment**: Razorpay / Stripe
 - **Cloud Storage**: Firebase Storage / AWS S3
+- **Email**: Nodemailer
+- **SMS**: Twilio
 
 ### APIs & Services
-- Google Maps API
+- Google Maps API (Places, Directions, Geocoding)
 - OpenWeatherMap API
 - MakeMyTrip Affiliate API
 - Booking.com Affiliate API
 - Uber/Ola API
 - Google AdMob
 - Razorpay Payment Gateway
+- Firebase Cloud Messaging
 
-## 📱 Screens (40+ Screens)
+### DevOps
+- **Hosting**: Railway (Backend), GitHub Pages (Landing)
+- **CI/CD**: GitHub Actions
+- **Monitoring**: Sentry, Google Analytics
+- **Version Control**: Git + GitHub
 
-### Authentication (5)
+---
+
+## 📊 Revenue Model Breakdown
+
+| Revenue Stream | Monthly Estimate | Commission/Rate |
+|---------------|------------------|-----------------|
+| **Affiliate Commission** | ₹50,000 - ₹2,00,000 | 2-8% per booking |
+| **Advertisements** | ₹30,000 - ₹1,00,000 | CPM/CPC based |
+| **Premium Subscription** | ₹20,000 - ₹80,000 | ₹199/month |
+| **Business Listings** | ₹50,000 - ₹1,50,000 | ₹2,999-₹4,999/month |
+| **Travel Packages** | ₹40,000 - ₹1,20,000 | 10-15% commission |
+| **TOTAL** | **₹1,90,000 - ₹6,50,000** | - |
+
+📈 **Growth Projection**: ₹6,50,000/month by Month 12
+
+---
+
+## 📱 App Screens (40+ Screens)
+
+### Authentication (5 screens)
 - Splash Screen
-- Onboarding
+- Onboarding Slides
 - Login/Signup
 - OTP Verification
 - Language Selection
 
-### Home & Discovery (8)
+### Home & Discovery (8 screens)
 - Home Dashboard
 - Explore Destinations
 - Destination Details
 - Search & Filter
 - Travel Reels Feed
-- Reel Detail
+- Reel Detail View
 - Map View
 - Nearby Places
 
-### AI Trip Planner (4)
+### AI Trip Planner (4 screens)
 - Trip Input Form
 - AI Generated Itinerary
 - Edit Itinerary
 - Saved Trips
 
-### Booking (8)
+### Booking (8 screens)
 - Flight Search/Results
 - Hotel Search/Results
 - Bus/Train Search/Results
 - Local Guide Listing
-- Guide Profile
+- Guide Profile & Booking
 
-### Profile (6)
+### Profile (6 screens)
 - User Profile
 - My Trips
 - Wishlist
@@ -91,200 +135,327 @@ A modern, feature-rich travel and tourism mobile application for Indian and inte
 - Settings
 - Premium Subscription
 
-### Admin Panel (10)
+### Admin Panel (10 screens)
 - Dashboard
 - User Management
 - Destination Management
 - Listings Approval
-- Analytics
-- Earnings Report
+- Analytics & Earnings
 - Ad Management
 - Content Moderation
 
+---
+
 ## 🗄️ Database Schema
 
-### Collections
-- **users**: User profiles, auth, premium status
-- **destinations**: Places, coordinates, weather, safety
-- **trips**: AI-generated itineraries
-- **reels**: User-uploaded travel videos
-- **bookings**: Affiliate booking tracking
-- **guides**: Local guide profiles
-- **affiliate_clicks**: Commission tracking
-- **subscriptions**: Premium user data
-- **business_listings**: Promoted businesses
+### MongoDB Collections
+
+```javascript
+// Users Collection
+{
+  _id, email, phone, name, profilePicture,
+  authProvider, isPremium, premiumExpiry,
+  language, wishlist[], createdAt
+}
+
+// Destinations Collection
+{
+  _id, name, slug, country, state, category[],
+  description, images[], coordinates: {lat, lng},
+  weather, thingsToDo[], safetyRating,
+  popularityScore, isPromoted
+}
+
+// Trips Collection (AI Generated)
+{
+  _id, userId, destination, budget, days,
+  interests[], itinerary[], hotels[], flights[],
+  totalEstimatedCost, status
+}
+
+// Reels Collection
+{
+  _id, userId, videoUrl, thumbnail,
+  destination, caption, likes, views
+}
+
+// Bookings Collection
+{
+  _id, userId, type, affiliatePartner,
+  bookingData, commission, status
+}
+```
+
+[View Complete Schema →](docs/PROJECT_STRUCTURE.md)
+
+---
 
 ## 🔌 API Endpoints
 
 ### Authentication
 ```
-POST /api/auth/signup
-POST /api/auth/login
-POST /api/auth/verify-otp
-POST /api/auth/google-login
+POST   /api/auth/signup
+POST   /api/auth/login
+POST   /api/auth/verify-otp
+POST   /api/auth/google-login
 ```
 
 ### Destinations
 ```
-GET  /api/destinations
-GET  /api/destinations/:id
-GET  /api/destinations/search
-GET  /api/destinations/nearby
+GET    /api/destinations
+GET    /api/destinations/:id
+GET    /api/destinations/search?q=goa
+GET    /api/destinations/nearby?lat=19&lng=72
 ```
 
 ### AI Trip Planner
 ```
-POST /api/trip-planner/generate
-GET  /api/trip-planner/my-trips
-POST /api/trip-planner/save
+POST   /api/trip-planner/generate
+GET    /api/trip-planner/my-trips
+POST   /api/trip-planner/save
+PUT    /api/trip-planner/:id
 ```
 
 ### Bookings
 ```
-POST /api/bookings/flights/search
-POST /api/bookings/hotels/search
-POST /api/bookings/track-click
-POST /api/bookings/track-conversion
+POST   /api/bookings/flights/search
+POST   /api/bookings/hotels/search
+POST   /api/bookings/track-click
+POST   /api/bookings/track-conversion
 ```
 
 ### Premium
 ```
-GET  /api/premium/plans
-POST /api/premium/subscribe
-POST /api/premium/verify-payment
+GET    /api/premium/plans
+POST   /api/premium/subscribe
+POST   /api/premium/verify-payment
 ```
 
-## 💰 Revenue Model
+[View Complete API Documentation →](docs/API_DOCUMENTATION.md)
 
-### 1. Affiliate Commission (₹50K - ₹2L/month)
-- Flights: 2-5% per booking
-- Hotels: 4-8% per booking
-- Cabs: ₹20-50 per ride
-- Buses: 2-3% per ticket
+---
 
-### 2. Advertisements (₹30K - ₹1L/month)
-- Banner Ads: ₹0.10-0.50 per impression
-- Interstitial Ads: ₹2-5 per click
-- Native Ads: ₹1-3 per click
+## 🚀 Quick Start
 
-### 3. Premium Subscription (₹20K - ₹80K/month)
-- Monthly: ₹199
-- Yearly: ₹999
-- Features: Ad-free, offline maps, unlimited AI plans
-
-### 4. Business Listings (₹50K - ₹1.5L/month)
-- Featured Listing: ₹2,999/month
-- Top Placement: ₹4,999/month
-
-### 5. Travel Packages (₹40K - ₹1.2L/month)
-- Commission: 10-15% per package
-
-## 🚀 MVP Roadmap (12 Weeks)
-
-### Phase 1: Foundation (Weeks 1-3)
-- Project setup
-- Authentication system
-- Basic UI/UX
-- Database design
-
-### Phase 2: Core Features (Weeks 4-6)
-- Destinations listing
-- Search & filter
-- Map integration
-- Weather API
-
-### Phase 3: Booking & AI (Weeks 7-9)
-- Affiliate integration
-- AI Trip Planner
-- Local guides
-- Travel reels
-
-### Phase 4: Monetization (Weeks 10-12)
-- Premium subscription
-- AdMob integration
-- Admin panel
-- Testing & deployment
-
-## 📦 Installation
+### Prerequisites
+- Node.js 18+
+- MongoDB Atlas account
+- Flutter SDK 3.16+ (for mobile app)
+- Firebase account
+- OpenAI API key
+- Google Maps API key
+- Razorpay account
 
 ### Backend Setup
+
 ```bash
-cd backend
+# Clone repository
+git clone https://github.com/rahul700raj/travel-tourism-app.git
+cd travel-tourism-app/backend
+
+# Install dependencies
 npm install
+
+# Configure environment variables
 cp .env.example .env
-# Add your API keys
+# Edit .env with your API keys
+
+# Start development server
 npm run dev
 ```
 
-### Frontend Setup
+Backend will run on `http://localhost:5000`
+
+### Frontend Setup (Flutter)
+
 ```bash
 cd frontend
+
+# Install dependencies
 flutter pub get
-# or
+
+# Run on emulator/device
+flutter run
+
+# Build for production
+flutter build apk --release  # Android
+flutter build ios --release  # iOS
+```
+
+### Admin Panel Setup
+
+```bash
+cd admin-panel
+
+# Install dependencies
 npm install
+
+# Start development server
 npm start
 ```
 
+Admin panel will run on `http://localhost:3000`
+
+---
+
 ## 🔑 Environment Variables
 
+### Backend (.env)
 ```env
-# Backend
-MONGODB_URI=your_mongodb_uri
-FIREBASE_CONFIG=your_firebase_config
-OPENAI_API_KEY=your_openai_key
-RAZORPAY_KEY_ID=your_razorpay_key
+NODE_ENV=development
+PORT=5000
+MONGODB_URI=mongodb://localhost:27017/travel-tourism
+JWT_SECRET=your_jwt_secret_key
+OPENAI_API_KEY=your_openai_api_key
+GOOGLE_MAPS_API_KEY=your_google_maps_key
+RAZORPAY_KEY_ID=your_razorpay_key_id
 RAZORPAY_KEY_SECRET=your_razorpay_secret
-GOOGLE_MAPS_API_KEY=your_maps_key
-
-# Frontend
-GOOGLE_MAPS_API_KEY=your_maps_key
-RAZORPAY_KEY_ID=your_razorpay_key
-ADMOB_APP_ID=your_admob_id
+FIREBASE_PROJECT_ID=your_firebase_project_id
+TWILIO_ACCOUNT_SID=your_twilio_sid
+TWILIO_AUTH_TOKEN=your_twilio_token
 ```
 
-## 📊 Admin Panel
+[View Complete Environment Variables →](backend/.env.example)
 
-Access at: `/admin`
+---
 
-Features:
-- User analytics
-- Revenue tracking
-- Destination management
-- Content moderation
-- Earnings report
+## 📚 Documentation
+
+- 📖 [API Documentation](docs/API_DOCUMENTATION.md) - Complete API reference
+- 💰 [Monetization Strategy](docs/MONETIZATION.md) - Revenue model details
+- 📁 [Project Structure](docs/PROJECT_STRUCTURE.md) - Code organization
+- 🚀 [Deployment Guide](docs/DEPLOYMENT.md) - Production deployment
+
+---
+
+## 🗓️ MVP Roadmap (12 Weeks)
+
+### Phase 1: Foundation (Weeks 1-3) ✅
+- [x] Project setup (Flutter/React Native + Node.js)
+- [x] Database design & setup
+- [x] Authentication system (Email, Google, OTP)
+- [x] Basic UI/UX design system
+- [x] Home screen & navigation
+
+### Phase 2: Core Features (Weeks 4-6) 🚧
+- [ ] Destinations listing & details
+- [ ] Search & filter functionality
+- [ ] Map integration (Google Maps)
+- [ ] Weather API integration
+- [ ] Wishlist functionality
+
+### Phase 3: Booking & AI (Weeks 7-9) 📅
+- [ ] Affiliate integration (MakeMyTrip, Booking.com)
+- [ ] AI Trip Planner (OpenAI/Gemini)
+- [ ] Local guides listing
+- [ ] Travel reels upload & feed
+- [ ] Click tracking system
+
+### Phase 4: Monetization & Polish (Weeks 10-12) 📅
+- [ ] Premium subscription (Razorpay)
+- [ ] Google AdMob integration
+- [ ] Admin panel
+- [ ] Multi-language support
+- [ ] Testing & bug fixes
+- [ ] App store deployment
+
+---
 
 ## 🎨 Design System
 
-### Colors
-- Primary: #FF6B35 (Orange)
-- Secondary: #004E89 (Blue)
-- Accent: #F7B801 (Yellow)
-- Background: #F8F9FA
+### Color Palette
+```css
+Primary:    #FF6B35  /* Vibrant Orange */
+Secondary:  #004E89  /* Deep Blue */
+Accent:     #F7B801  /* Golden Yellow */
+Background: #F8F9FA  /* Light Gray */
+Text:       #212529  /* Dark Gray */
+Success:    #28A745
+Error:      #DC3545
+```
 
 ### Typography
-- Headings: Poppins Bold
-- Body: Inter Regular
-- Captions: Inter Light
+- **Headings**: Poppins (Bold)
+- **Body**: Inter (Regular)
+- **Captions**: Inter (Light)
 
-## 📱 App Store Links
+### UI Components
+- Destination Cards: Instagram-style with gradient overlays
+- Reels Feed: TikTok-style vertical scroll
+- Search Bar: Floating with rounded corners
+- Bottom Navigation: 5 tabs (Home, Explore, Reels, Trips, Profile)
 
-- **Android**: [Google Play Store](#)
-- **iOS**: [Apple App Store](#)
-- **Web**: [Live Demo](#)
+---
+
+## 🚀 Deployment
+
+### Backend (Railway)
+```bash
+# Install Railway CLI
+npm install -g @railway/cli
+
+# Login and deploy
+railway login
+cd backend
+railway init
+railway up
+```
+
+### Frontend (App Stores)
+```bash
+# Android
+flutter build appbundle --release
+
+# iOS
+flutter build ios --release
+```
+
+### Landing Page (GitHub Pages)
+Already deployed! ✅
+- **URL**: https://rahul700raj.github.io/travel-tourism-app/
+
+[View Deployment Guide →](docs/DEPLOYMENT.md)
+
+---
+
+## 📊 Project Stats
+
+- **Total Screens**: 40+
+- **API Endpoints**: 50+
+- **Database Collections**: 10
+- **Supported Languages**: 2 (Hindi, English)
+- **Target Platforms**: Android, iOS, Web
+- **Estimated Development Time**: 12 weeks
+- **Team Size**: 1-3 developers
+
+---
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please read our contributing guidelines.
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
 
 ## 📄 License
 
-MIT License - see LICENSE file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
 
 ## 👨‍💻 Developer
 
 **Rahul Mishra**
-- Email: rm2778643@gmail.com
-- GitHub: [@rahul700raj](https://github.com/rahul700raj)
+- 📧 Email: rm2778643@gmail.com
+- 🐙 GitHub: [@rahul700raj](https://github.com/rahul700raj)
+- 💼 LinkedIn: [Connect with me](#)
+
+---
 
 ## 🙏 Acknowledgments
 
@@ -292,11 +463,54 @@ MIT License - see LICENSE file for details
 - Google Maps for location services
 - Firebase for backend infrastructure
 - Flutter/React Native community
+- MongoDB Atlas for database hosting
+- Railway for backend deployment
+
+---
+
+## 📞 Support
+
+- 📧 Email: rm2778643@gmail.com
+- 🐛 Issues: [GitHub Issues](https://github.com/rahul700raj/travel-tourism-app/issues)
+- 💬 Discussions: [GitHub Discussions](https://github.com/rahul700raj/travel-tourism-app/discussions)
+
+---
+
+## 🌟 Star History
+
+If you find this project helpful, please consider giving it a ⭐!
+
+---
+
+## 📈 Roadmap
+
+### Version 1.0 (Current)
+- ✅ Core features
+- ✅ AI trip planner
+- ✅ Booking integration
+- ✅ Basic monetization
+
+### Version 2.0 (Future)
+- [ ] Social features (follow, share)
+- [ ] Group trip planning
+- [ ] Live chat with guides
+- [ ] AR navigation
+- [ ] Offline mode
+- [ ] Multi-currency support
+- [ ] More languages
 
 ---
 
 **⭐ Star this repo if you find it helpful!**
 
-**📧 Contact**: rm2778643@gmail.com
-**🌐 Website**: [Coming Soon]
-**📱 Download**: [Coming Soon]
+**🔗 Links**:
+- 🌐 [Live Demo](https://rahul700raj.github.io/travel-tourism-app/)
+- 📖 [Documentation](docs/)
+- 🐙 [GitHub Repository](https://github.com/rahul700raj/travel-tourism-app)
+
+---
+
+<div align="center">
+  <p>Made with ❤️ by Rahul Mishra</p>
+  <p>© 2024 Travel & Tourism App. All rights reserved.</p>
+</div>
