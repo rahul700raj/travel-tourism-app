@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel & Tourism App - AI-Powered Travel Planning</title>
+    <meta name="description" content="Modern travel app with AI trip planner, booking integration, and monetization features. Plan your perfect trip with AI assistance.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #212529;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #FF6B35;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #212529;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #FF6B35;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            color: white;
+        }
+        
+        .hero h1 {
+            font-size: 56px;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background: #FF6B35;
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+        }
+        
+        .btn-primary:hover {
+            background: #e55a2b;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.6);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: #667eea;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+        }
+        
+        .btn-secondary:hover {
+            background: #f8f9fa;
+            transform: translateY(-2px);
+        }
+        
+        .features {
+            background: white;
+            padding: 80px 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 42px;
+            margin-bottom: 60px;
+            color: #212529;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .feature-card {
+            padding: 30px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #212529;
+        }
+        
+        .feature-card p {
+            color: #6c757d;
+            line-height: 1.8;
+        }
+        
+        .revenue {
+            background: linear-gradient(135deg, #FF6B35 0%, #F7B801 100%);
+            padding: 80px 20px;
+            color: white;
+        }
+        
+        .revenue-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .revenue-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        
+        .revenue-card h3 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        
+        .revenue-card p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        .tech-stack {
+            background: #f8f9fa;
+            padding: 80px 20px;
+        }
+        
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .tech-item {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        
+        .tech-item h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #212529;
+        }
+        
+        .tech-item p {
+            color: #6c757d;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        .cta-section h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        footer {
+            background: #212529;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #FF6B35;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .section-title {
+                font-size: 32px;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">🌍 TravelApp</div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#revenue">Revenue</a></li>
+                <li><a href="#tech">Tech Stack</a></li>
+                <li><a href="https://github.com/rahul700raj/travel-tourism-app">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>AI-Powered Travel Planning</h1>
+            <p>Modern travel app with intelligent trip planning, booking integration, and multiple revenue streams</p>
+            <div class="cta-buttons">
+                <a href="https://github.com/rahul700raj/travel-tourism-app" class="btn btn-primary">View on GitHub</a>
+                <a href="#features" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Powerful Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI Trip Planner</h3>
+                    <p>Generate personalized itineraries based on budget, interests, and duration using OpenAI GPT-4</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✈️</div>
+                    <h3>Booking Integration</h3>
+                    <p>Seamless integration with MakeMyTrip, Booking.com, Uber, and more for flights, hotels, and cabs</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🗺️</div>
+                    <h3>Smart Maps</h3>
+                    <p>Google Maps integration for nearby places, restaurants, attractions, and navigation</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📹</div>
+                    <h3>Travel Reels</h3>
+                    <p>Instagram-style short videos for destination inspiration and user-generated content</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍🏫</div>
+                    <h3>Local Guides</h3>
+                    <p>Book verified local guides for authentic experiences and insider knowledge</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌤️</div>
+                    <h3>Weather & Safety</h3>
+                    <p>Real-time weather updates, best time to visit, and safety ratings for destinations</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👑</div>
+                    <h3>Premium Features</h3>
+                    <p>Ad-free experience, offline maps, unlimited AI plans for ₹199/month</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Multi-language</h3>
+                    <p>Support for Hindi and English with easy language switching</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="revenue" class="revenue">
+        <div class="container">
+            <h2 class="section-title">Revenue Potential</h2>
+            <p style="text-align: center; font-size: 20px; margin-bottom: 40px;">Multiple monetization streams for sustainable growth</p>
+            <div class="revenue-grid">
+                <div class="revenue-card">
+                    <h3>₹50K-₹2L</h3>
+                    <p>Affiliate Commission</p>
+                    <small>Flights, Hotels, Cabs, Buses</small>
+                </div>
+                <div class="revenue-card">
+                    <h3>₹30K-₹1L</h3>
+                    <p>Advertisement</p>
+                    <small>Google AdMob Integration</small>
+                </div>
+                <div class="revenue-card">
+                    <h3>₹20K-₹80K</h3>
+                    <p>Premium Subscription</p>
+                    <small>₹199/month or ₹999/year</small>
+                </div>
+                <div class="revenue-card">
+                    <h3>₹50K-₹1.5L</h3>
+                    <p>Business Listings</p>
+                    <small>Featured Placement</small>
+                </div>
+                <div class="revenue-card">
+                    <h3>₹40K-₹1.2L</h3>
+                    <p>Travel Packages</p>
+                    <small>10-15% Commission</small>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 60px;">
+                <h3 style="font-size: 48px; margin-bottom: 10px;">₹1.9L - ₹6.5L</h3>
+                <p style="font-size: 24px;">Estimated Monthly Revenue</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="tech" class="tech-stack">
+        <div class="container">
+            <h2 class="section-title">Tech Stack</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <h4>Frontend</h4>
+                    <p>Flutter / React Native</p>
+                </div>
+                <div class="tech-item">
+                    <h4>Backend</h4>
+                    <p>Node.js + Express</p>
+                </div>
+                <div class="tech-item">
+                    <h4>Database</h4>
+                    <p>MongoDB / Firebase</p>
+                </div>
+                <div class="tech-item">
+                    <h4>AI</h4>
+                    <p>OpenAI GPT-4</p>
+                </div>
+                <div class="tech-item">
+                    <h4>Maps</h4>
+                    <p>Google Maps API</p>
+                </div>
+                <div class="tech-item">
+                    <h4>Payment</h4>
+                    <p>Razorpay / Stripe</p>
+                </div>
+                <div class="tech-item">
+                    <h4>Auth</h4>
+                    <p>Firebase Auth</p>
+                </div>
+                <div class="tech-item">
+                    <h4>Ads</h4>
+                    <p>Google AdMob</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Build?</h2>
+            <p>Complete source code, documentation, and deployment guides available on GitHub</p>
+            <div class="cta-buttons">
+                <a href="https://github.com/rahul700raj/travel-tourism-app" class="btn btn-primary">Get Started</a>
+                <a href="https://github.com/rahul700raj/travel-tourism-app/blob/main/docs/API_DOCUMENTATION.md" class="btn btn-secondary">View Docs</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="https://github.com/rahul700raj/travel-tourism-app">GitHub</a>
+                <a href="https://github.com/rahul700raj/travel-tourism-app/blob/main/docs/API_DOCUMENTATION.md">API Docs</a>
+                <a href="https://github.com/rahul700raj/travel-tourism-app/blob/main/docs/MONETIZATION.md">Monetization</a>
+                <a href="mailto:rm2778643@gmail.com">Contact</a>
+            </div>
+            <p>&copy; 2024 Travel & Tourism App. Built by Rahul Mishra</p>
+            <p style="margin-top: 10px; opacity: 0.7;">Open Source • MIT License</p>
+        </div>
+    </footer>
+</body>
+</html>
